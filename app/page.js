@@ -4,7 +4,7 @@ import "@/components/Ayah.css"
 import Search from '@/components/Search'
 
 
-const page = () => {
+const Page = () => {
   return (<>
     <div>
         <Ayah/>
@@ -17,7 +17,7 @@ const page = () => {
   )
 }
 
-export default page
+export default Page
 
 
 

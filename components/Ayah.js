@@ -5,7 +5,7 @@ import { useState } from 'react';
 
 
 
-const body = () => {
+const Body = () => {
   const [Ayat, setAyat] = useState({
     "data": {
       "numberInSurah": 1,
@@ -51,5 +51,5 @@ const generateAyah = async () => {
   )
 }
 
-export default body
+export default Body
 
