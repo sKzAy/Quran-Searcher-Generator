@@ -40,8 +40,10 @@ const Search = () => {
 </svg><input ref={InRef} type="text" placeholder='Enter Ayah Number' /></div>
        <div className="btn"><button onClick={handleClick}>Search</button></div>
        <div className="Result">
-       <div><b>Result</b>: <br />{Ayat.data.text}</div>
-       <div>{Ayat.data.surah.englishName} : {Ayat.data.numberInSurah}</div>
+       <p><b>Result</b>: <br />'{Ayat.data.text}'
+       <br />
+       <div>{Ayat.data.surah.englishName} : {Ayat.data.numberInSurah}</div></p>
+       
        </div>
     </div>
     

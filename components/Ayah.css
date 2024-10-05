@@ -104,11 +104,21 @@ svg{
 }
 
 .Result{
-    max-width: 20vw;
+    max-width: 40vw;
     border:1px solid yellow;
     margin-top: 20px;
 
 }
-.Result div{
-    padding: 10px;
+.Result p{
+    padding: 30px;
 }
+
+@media only screen and (max-width: 600px) {
+    .card{
+        width: 80vw;
+    }
+    .Result{
+       max-width:90vw;
+    }
+
+  }
