@@ -36,7 +36,7 @@ const generateAyah = async () => {
 }
   return (
     <div>
-        <div className="container">
+        <div className="container container1">
     <div className="card">
     <div className="h1">
         Quran Verses Generator
