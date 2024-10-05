@@ -1,0 +1,114 @@
+*{
+    font-weight: bold;
+    
+}
+html{
+    background-color: black;
+}
+.h1{
+    font-size: large;
+    text-align: center;
+    padding-bottom: 50px;
+    text-decoration: underline;
+}
+.Atext{
+    text-align: center;
+    font-size: large;
+}
+.Stext{
+    text-align: center;
+    padding-top: 15px;
+    font-size: large;
+}
+/* BELOW IS SEARCH CSS */
+
+.container{
+    height: 100%;
+    max-width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+    margin: auto;
+    flex-direction: column;
+}
+
+.card{
+    background-color: rgb(24, 24, 24);
+    color: white;
+    padding: 100px;
+    position: relative;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@property --angle{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+.card::after, .card::before{
+   
+    content: "";
+    height: 103%;
+    width: 102%;
+    background-image:conic-gradient(from var(--angle),red,green,cyan,blue,red);
+    z-index: 1;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    border-radius: 10px;
+    animation: 15s spin linear infinite;
+}
+.card::before{
+    filter: blur(1.5rem);
+    opacity: 0.25;
+}
+
+.btn{
+    padding-top:25px;
+   text-align: center;
+}
+button{
+    background: linear-gradient(to bottom right,cyan,blue);
+    padding: 5px;
+    border-radius: 15px;
+}
+input{
+    padding-left:auto;
+    text-align: center;
+    color: black;
+}
+.line{
+    text-align: center;
+}
+
+@keyframes spin{
+    from{
+        --angle: 0deg
+    }
+    to{
+        --angle: 360deg
+    }
+}
+
+svg{
+    position: relative;
+    top: 22px;
+    padding-left: 3px;
+}
+
+.Result{
+    max-width: 20vw;
+    border:1px solid yellow;
+    margin-top: 20px;
+
+}
+.Result div{
+    padding: 10px;
+}
