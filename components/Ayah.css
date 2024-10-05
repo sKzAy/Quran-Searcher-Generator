@@ -104,7 +104,7 @@ svg{
 }
 
 .Result{
-    max-width: 40vw;
+   width: fit-content;
     border:1px solid yellow;
     margin-top: 20px;
 
@@ -121,12 +121,9 @@ svg{
         align-items: center;
     }
     .container{
-        min-width: 70vw;
-    }
-    .Result{
-        max-width: 50vw;
+        min-width: fit-content;
     }
     .Result p{
-        min-width: 40vw;
+       max-width: fit-content;
     }
   }
