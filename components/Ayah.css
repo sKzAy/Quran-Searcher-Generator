@@ -114,11 +114,18 @@ svg{
 }
 
 @media only screen and (max-width: 600px) {
-    .card{
-        min-width: 80vw;
+    html{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .container{
+        min-width: 70vw;
     }
     .Result{
-       min-width:70vw;
+        
     }
+    
 
   }

@@ -41,9 +41,11 @@ const generateAyah = async () => {
     <div className="h1">
         Quran Verses Generator
     </div>
+    <div className="content">
         <div className="Atext">{Ayat.data.text}</div>
         <div className="Stext">{Ayat.data.surah.englishName} : {Ayat.data.numberInSurah}</div>
         <div className="btn" onClick={generateAyah}><button>Generate</button></div>
+        </div>
     </div>
 </div>
       
