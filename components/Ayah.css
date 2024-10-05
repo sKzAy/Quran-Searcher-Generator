@@ -115,10 +115,10 @@ svg{
 
 @media only screen and (max-width: 600px) {
     .card{
-        width: 80vw;
+        min-width: 80vw;
     }
     .Result{
-       max-width:90vw;
+       min-width:70vw;
     }
 
   }
