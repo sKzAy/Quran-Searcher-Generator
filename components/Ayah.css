@@ -110,7 +110,7 @@ svg{
 
 }
 .Result p{
-    padding: 30px;
+    padding: 15px;
 }
 
 @media only screen and (max-width: 600px) {
@@ -122,8 +122,11 @@ svg{
     }
     .container{
         min-width: fit-content;
-    }
+        }
     .Result p{
        max-width: fit-content;
+    }
+    .card{
+        padding: 50px;
     }
   }
