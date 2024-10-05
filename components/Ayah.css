@@ -120,10 +120,10 @@ svg{
         justify-content: center;
         align-items: center;
     }
-    .container{
+    .container .card{
         min-width: fit-content;
         }
-    .Result p{
+    .container .content{
        max-width: fit-content;
     }
     .card{
