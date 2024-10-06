@@ -13,9 +13,10 @@ const Search = () => {
       }
       else{
         alert("Please enter an ayah number between 1 and 6236")
+        InRef.current.value = ''
       }
     }
-    
+
     const [Ayat, setAyat] = useState({
         "data": {
           "numberInSurah": 1,
