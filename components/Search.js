@@ -7,9 +7,15 @@ import "./Ayah"
 const Search = () => {
     const InRef = useRef()
     const handleClick = ()=>{
-       let a = InRef.current.value
-       fetchData(a)
+      if (parseInt(InRef.current.value) > 0 && parseInt(InRef.current.value) <= 6236){
+        let a = InRef.current.value
+        fetchData(a)
+      }
+      else{
+        alert("Please enter an ayah number between 1 and 6236")
+      }
     }
+    
     const [Ayat, setAyat] = useState({
         "data": {
           "numberInSurah": 1,
@@ -25,8 +31,9 @@ const Search = () => {
           const data = await response.json();
           setAyat(data);
         } catch (error) {
-          console.error(error);
+          alert("Error, enter an ayah number between 1 and 6236");
         }
+        InRef.current.value = ""
       }
       
   return (
@@ -40,9 +47,9 @@ const Search = () => {
 </svg><input ref={InRef} type="text" placeholder='Enter Ayah Number' /></div>
        <div className="btn"><button onClick={handleClick}>Search</button></div>
        <div className="Result">
-       <p><b>Result</b>: <br />{Ayat.data.text}
+       <div><b>Result</b>: <br />{Ayat.data.text}
        <br />
-       <div>{Ayat.data.surah.englishName} : {Ayat.data.numberInSurah}</div></p>
+       <div>{Ayat.data.surah.englishName} : {Ayat.data.numberInSurah}</div></div>
        
        </div>
     </div>

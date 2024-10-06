@@ -16,16 +16,7 @@ const Body = () => {
       }
     }
   })
-  const randomAyahNumber = Math.floor(Math.random() * (6236 - 1 + 1)) + 1;
-async function fetchData() {
-  try {
-    const response = await fetch(`https://api.alquran.cloud/v1/ayah/${randomAyahNumber}/en.asad`);
-    const data = await response.json();
-    setAyat(data);
-  } catch (error) {
-    console.error(error);
-  }
-}
+
 const generateAyah = async () => {
 
   const apiURL = `https://api.alquran.cloud/v1/ayah/${Math.floor(Math.random() * 6236) + 1}/en.asad`;
