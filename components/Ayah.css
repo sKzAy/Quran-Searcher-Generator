@@ -78,7 +78,8 @@ button{
     background: linear-gradient(to bottom right,cyan,blue);
     padding: 5px;
     border-radius: 15px;
-    width: fit-content;
+    min-width: fit-content;
+    text-align: center;
 }
 input{
     padding-left:auto;
@@ -136,7 +137,7 @@ svg{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 25vw;
+    gap: 22vw;
 }
 .btn2 > button{
    text-align: center;
