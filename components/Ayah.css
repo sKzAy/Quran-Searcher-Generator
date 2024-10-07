@@ -78,11 +78,13 @@ button{
     background: linear-gradient(to bottom right,cyan,blue);
     padding: 5px;
     border-radius: 15px;
+    width: fit-content;
 }
 input{
     padding-left:auto;
     text-align: center;
     color: black;
+   
 }
 .line{
     text-align: center;
@@ -130,3 +132,13 @@ svg{
         padding: 50px;
     }
   }
+.buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25vw;
+}
+.btn2 > button{
+   text-align: center;
+   width: fit-content;
+}

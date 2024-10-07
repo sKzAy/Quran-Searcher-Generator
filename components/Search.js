@@ -6,23 +6,37 @@ import "./Ayah"
 
 const Search = () => {
     const InRef = useRef()
-    const handleClick = ()=>{
-      if (parseInt(InRef.current.value) > 0 && parseInt(InRef.current.value) <= 6236){
-        let a = InRef.current.value
-        fetchData(a)
+    const [counter, setCounter] = useState(1)
+
+    // const handleClick = ()=>{
+    //   console.log(InRef.current.value)
+    //   setCounter(InRef.current.value)
+    //   if (parseInt(InRef.current.value) > 0 && parseInt(InRef.current.value) <= 6236){
+    //     let a = InRef.current.value
+    //     fetchData(a)
+    //   }
+    //   else{
+    //     alert("Please enter an ayah number between 1 and 6236")
+    //     InRef.current.value = ''
+    //   }
+    // }
+    const handleClick = () => {
+      const inputValue = parseInt(InRef.current.value, 10); // Ensure it's an integer
+      if (inputValue > 0 && inputValue <= 6236) {
+        setCounter(inputValue); // Set counter to the input value
+        fetchData(inputValue);
+      } else {
+        alert("Please enter an ayah number between 1 and 6236");
+        InRef.current.value = "";
       }
-      else{
-        alert("Please enter an ayah number between 1 and 6236")
-        InRef.current.value = ''
-      }
-    }
+    };
 
     const [Ayat, setAyat] = useState({
         "data": {
           "numberInSurah": 1,
           "text": "In the name of God, The Most Gracious, The Dispenser of Grace",
           "surah": {
-            "englishName": "Al-Fatiha"
+            "englishName": "Al-Faatiha"
           }
         }
       })
@@ -36,6 +50,30 @@ const Search = () => {
         }
         InRef.current.value = ""
       }
+      const handleNext =  ()=>{
+      let numberNext = counter + 1
+      if (numberNext <= 6236) {
+       fetchData(numberNext)
+       setCounter(numberNext)
+       console.log(counter)
+      }
+      else{
+        alert("Maximuam Ayah number reached")
+      }
+      }
+
+      const handlePrev = ()=>{
+        let numberPrev = counter - 1
+        if (numberPrev !== 0) {
+       fetchData(numberPrev)
+       setCounter(counter-1)
+       console.log(counter)
+      }
+      else{
+        alert("Ayah number is at its minimum")
+      }
+      }
+
       
   return (
     <div>
@@ -51,6 +89,8 @@ const Search = () => {
        <div><b>Result</b>: <br />{Ayat.data.text}
        <br />
        <div>{Ayat.data.surah.englishName} : {Ayat.data.numberInSurah}</div></div>
+       <div className="btn2 buttons"><button onClick={handlePrev}>Previous Verse &larr;</button><button onClick={handleNext}>Next Verse &rarr;</button></div>
+
        
        </div>
     </div>
