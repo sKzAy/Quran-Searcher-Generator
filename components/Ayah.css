@@ -108,8 +108,9 @@ svg{
 
 .Result{
    width: fit-content;
-    border:1px solid yellow;
+    border:3px solid white;
     margin-top: 20px;
+    
 
 }
 .Result div{
@@ -137,9 +138,10 @@ svg{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 22vw;
+    gap: 2vw;
 }
 .btn2 > button{
    text-align: center;
    width: fit-content;
+   font-size: smaller;
 }

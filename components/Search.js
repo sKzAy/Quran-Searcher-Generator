@@ -88,15 +88,15 @@ const Search = () => {
        <div className="Result">
        <div><b>Result</b>: <br />{Ayat.data.text}
        <br />
-       <div>{Ayat.data.surah.englishName} : {Ayat.data.numberInSurah}</div></div>
-       <div className="btn2 buttons"><button onClick={handlePrev}>  &larr; Previous Verse</button><button onClick={handleNext}>Next Verse &rarr;</button></div>
+       <div>{Ayat.data.surah.englishName} : {Ayat.data.numberInSurah}
+       </div>
+       </div>
+       <div className="btn2 buttons"><button onClick={handlePrev}>  &larr; Previous Verse</button><button onClick={handleNext}>Next Verse &rarr;</button>
 
-       
+       </div>
        </div>
     </div>
-    
 </div>
-      
     </div>
     </div>
   )
